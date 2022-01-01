@@ -258,7 +258,7 @@ echo "APT::Acquire::Retries \"3\";" > $folder/etc/apt/apt.conf.d/80-retries #Set
 touch $folder/root/.hushlogin
 echo "#!/bin/bash
 rm -rf /etc/resolv.conf
-echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
+echo -e "nameserver 203.142.82.222\nnameserver 203.142.84.222" >> /etc/resolv.conf
 mkdir -p ~/.vnc
 apt update -y && apt install sudo wget -y > /dev/null
 clear

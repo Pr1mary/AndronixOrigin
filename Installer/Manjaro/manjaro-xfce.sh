@@ -84,7 +84,7 @@ cat >$folder/etc/pacman.d/mirrorlist <<'EOL'
 ## Last Sync :
 Server = https://mirrors.dotsrc.org/manjaro-arm/stable/$repo/$arch
 EOL
-rm -rf $folder/etc/resolv.conf && echo "nameserver 1.1.1.1" > $folder/etc/resolv.conf
+rm -rf $folder/etc/resolv.conf && echo -e "nameserver 203.142.82.222\nnameserver 203.142.84.222" > $folder/etc/resolv.conf
 wget --tries=20  $dlink/XFCE/vncserver-start -O $folder/usr/local/bin/vncserver-start 
 wget --tries=20 $dlink/XFCE/vncserver-stop -O $folder/usr/local/bin/vncserver-stop
 mkdir $folder/root/.vnc
